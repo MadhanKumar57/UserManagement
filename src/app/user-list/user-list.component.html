@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="header-container">
+        <h1 class="title">User Management</h1>
+        <button mat-raised-button color="primary" class="export" (click)="exportToExcel()"><i class="fa fa-file"
+                aria-hidden="true"></i> Export to Excel</button>
+    </div>
+    <div class="table-container">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+            <ng-container matColumnDef="#">
+                <th mat-header-cell *matHeaderCellDef>#</th>
+                <td mat-cell *matCellDef="let element; let i = index">{{ getSerialNumber(i) }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Image">
+                <th mat-header-cell *matHeaderCellDef>Image</th>
+                <td mat-cell *matCellDef="let element">
+                    <img [src]="element.image" alt="User Image" class="rounded-image">
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="First Name">
+                <th mat-header-cell *matHeaderCellDef>First Name</th>
+                <td mat-cell *matCellDef="let element">{{element.firstName}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Last Name">
+                <th mat-header-cell *matHeaderCellDef>Last Name</th>
+                <td mat-cell *matCellDef="let element">{{element.lastName}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Birth Date">
+                <th mat-header-cell *matHeaderCellDef>Birth Date</th>
+                <td mat-cell *matCellDef="let element">{{element.birthDate | dateFormat}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Blood Group">
+                <th mat-header-cell *matHeaderCellDef>Blood Group</th>
+                <td mat-cell *matCellDef="let element">{{element.bloodGroup}}</td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </div>
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>

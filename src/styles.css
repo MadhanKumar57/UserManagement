@@ -1,1 +1,182 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 90%;
+    padding: 16px;
+    align-items: center;
+}
+
+mat-table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3590d1;
+    color: #ffff;
+    height: 70px;
+    padding-left: 50px;
+}
+
+.title {
+    margin-left: 40px;
+}
+
+.export {
+    margin-right: 50px !important;
+}
+
+table.mat-elevation-z8 {
+    width: 100%;
+    border-collapse: separate;
+}
+
+.mat-table {
+    background: #fff !important;
+}
+
+table.mat-elevation-z8 th,
+table.mat-elevation-z8 td {
+    border-bottom: 1px solid #c4c1c1 !important;
+    padding: 8px !important;
+    text-align: left !important;
+    background-color: #fff;
+    color: #000;
+}
+
+.table-container table {
+    font-family: 'Roboto', sans-serif;
+}
+
+table.mat-elevation-z8 th {
+    background-color: #fff !important;
+    color: #000 !important;
+    font-weight: 600 !important;
+}
+
+table.mat-elevation-z8 tr:hover {
+    background-color: #f9f9f9 !important;
+}
+
+table.mat-elevation-z8 th,
+table.mat-elevation-z8 td {
+    padding: 10px 20px !important;
+}
+
+.mat-paginator {
+    margin-top: 20px !important;
+}
+
+.rounded-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+.mat-header-cell,
+.mat-cell {
+    font-size: 14px !important;
+}
+
+.mat-typography h1 {
+    font: 400 24px / 32px Roboto, "Helvetica Neue", sans-serif;
+    letter-spacing: normal;
+    margin: 0 0 0px !important;
+}
+
+.mat-paginator-container {
+    background-color: #fff !important;
+}
+
+.mat-paginator-page-size {
+    color: #929090;
+}
+
+.mat-paginator {
+    color: #929090;
+}
+
+.mat-select-value {
+    color: #929090;
+}
+
+.mat-select-arrow {
+    color: #929090;
+}
+
+.table-container {
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.mat-raised-button.mat-primary {
+    background-color: #ccc;
+    color: #000;
+}
+
+.mat-select-panel .mat-option.mat-selected:not(.mat-option-multiple) {
+    background-color: #ccc;
+}
+
+.mat-option {
+    background-color: #fff;
+}
+
+.mat-option-text {
+    color: #000;
+}
+
+.mat-paginator .mat-form-field-underline {
+    background-color: #929090;
+}
+
+.mat-paginator .mat-form-field-underline .mat-form-field-ripple {
+    background-color: #929090;
+}
+
+.mat-paginator .mat-select-arrow {
+    color: #929090;
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    /* Styles for tablets and small laptops */
+    .container {
+        padding: 16px;
+    }
+
+    .mat-header-cell,
+    .mat-cell {
+        font-size: 16px !important;
+    }
+}
+
+@media (min-width: 1025px) {
+
+    /* Styles for large screens */
+    .container {
+        padding: 24px;
+    }
+
+    .mat-header-cell,
+    .mat-cell {
+        font-size: 18px !important;
+    }
+}
